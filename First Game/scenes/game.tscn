@@ -347,25 +347,35 @@ theme_override_font_sizes/font_size = 8
 text = "Great job!"
 horizontal_alignment = 1
 
-[node name="Multiplayer" type="Control" parent="."]
+[node name="MultiplayerHud" type="Control" parent="."]
+unique_name_in_owner = true
 layout_mode = 3
 anchors_preset = 0
 offset_left = -110.0
 offset_bottom = 35.0
 
-[node name="Panel" type="Panel" parent="Multiplayer"]
+[node name="Panel" type="Panel" parent="MultiplayerHud"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Multiplayer/Panel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MultiplayerHud/Panel"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Host Game" type="Button" parent="Multiplayer/Panel/VBoxContainer"]
+[node name="HostGame" type="Button" parent="MultiplayerHud/Panel/VBoxContainer"]
 layout_mode = 2
+text = "Host new game"
 
-[node name="JoinAsPlayer2" type="Button" parent="Multiplayer/Panel/VBoxContainer/Host Game"]
+[node name="JoinAsPlayer2" type="Button" parent="MultiplayerHud/Panel/VBoxContainer/HostGame"]
+layout_mode = 0
+offset_left = -105.0
+offset_top = 38.0
+offset_right = 127.0
+offset_bottom = 62.0
 theme_override_fonts/font = ExtResource("2_nlliu")
 text = "Join as Player 2	"
+
+[connection signal="pressed" from="MultiplayerHud/Panel/VBoxContainer/HostGame" to="GameManager" method="become_host"]
+[connection signal="pressed" from="MultiplayerHud/Panel/VBoxContainer/HostGame/JoinAsPlayer2" to="GameManager" method="join_as_player_2"]
