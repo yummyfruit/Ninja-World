@@ -367,5 +367,6 @@ offset_bottom = 40.0
 layout_mode = 2
 
 [node name="JoinAsPlayer2" type="Button" parent="Multiplayer/Panel/VBoxContainer/Host Game"]
+layout_mode = 0
 theme_override_fonts/font = ExtResource("2_nlliu")
 text = "Join as Player 2	"
