@@ -368,12 +368,17 @@ offset_bottom = 40.0
 layout_mode = 2
 text = "Host new game"
 
+<<<<<<< HEAD
 [node name="JoinAsPlayer2" type="Button" parent="MultiplayerHud/Panel/VBoxContainer/HostGame"]
 layout_mode = 0
 offset_left = -105.0
 offset_top = 38.0
 offset_right = 127.0
 offset_bottom = 62.0
+=======
+[node name="JoinAsPlayer2" type="Button" parent="Multiplayer/Panel/VBoxContainer/Host Game"]
+layout_mode = 0
+>>>>>>> 7e01c077101de5decc524ed97492b671059ee766
 theme_override_fonts/font = ExtResource("2_nlliu")
 text = "Join as Player 2	"
 
